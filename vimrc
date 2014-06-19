@@ -1,0 +1,16 @@
+" This is a file to customize vim for me.
+" Author: Dakota Knutson
+
+" Enable Auto Indenting
+set autoindent
+
+" Enable Line Numbers and make them grey vs yellow
+set number
+highlight LineNr ctermfg=white
+highlight LineNr ctermbg=grey
+
+" Make the colors of the signs or gutter column match the line nubmer colors
+highlight SignColumn ctermbg=gray
+
+" Make all comments green. Blue was to hard to read on the black background.
+highlight Comment ctermfg=green
