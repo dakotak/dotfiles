@@ -6,7 +6,7 @@ Date: 06/19/2014
 ------------------------------
 
 Requirements:
-  git-scm - Used to get the files from the repository.
+  git-scm - Used to get the files from the repository. (http://git-scm.com/book/en/Getting-Started-Installing-Git)
 
 Usage:
   1. Change to home directory (cd ~)
