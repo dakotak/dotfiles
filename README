@@ -1,0 +1,17 @@
+------------------------------
+DotFiles ReadMe
+Author: DakotaK
+Email: dakota@ddev.im
+------------------------------
+
+Requirements:
+  git-scm - Used to get the files from the repository.
+
+Usage:
+  1. Change to home directory (cd ~)
+  2. Clone the files to the local machine (git clone git://github.com/dakotak/dotfiles.git)
+  3. Make the setup script executible. (chmod +x ~/dotfiles/make.sh)
+  4. Execute the setup script. (~/dotfiles/make.sh)
+
+Tested Operating Systems:
+  - Ubuntu Server 12.04.4 LTS
