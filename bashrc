@@ -40,7 +40,7 @@ esac
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
-#force_color_prompt=yes
+force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
@@ -114,3 +114,26 @@ genpasswd() {
 	[ "$1" == "" ] && l=16
 	tr -dc A-Za-z0-9 < /dev/urandom | head -c ${l} | xargs
 }
+
+### Git Prompt ###
+parse_git_branch () {
+	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+parse_git_tag () {
+	git describe --tags 2> /dev/null
+}
+
+parse_git_branch_or_tag() {
+	local OUT="$(parse_git_branch)"
+	if [ "$OUT" == " ((no branch))" ]; then
+		OUT="($(parse_git_tag))";
+	fi
+	echo $OUT
+}
+
+PS1="\u@\h:\w\$(parse_git_branch_or_tag) $ "
+### End Git Prompt ###
+
+
+
