@@ -4,6 +4,12 @@
 " Enable Auto Indenting
 set autoindent
 
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set smarttab
+set expandtab
+
 " Enable Line Numbers and make them grey vs yellow
 set number
 highlight LineNr ctermfg=white
