@@ -1,3 +1,4 @@
+#!/bin/bash
 # @author       Dakota Knutson <dakota@ddev.im>
 # @date         09-11-14
 # @file         bash_aliases
