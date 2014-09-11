@@ -8,7 +8,7 @@
 
 dir=~/dotfiles		# dotfiles directory
 olddir=~/dotfiles_old	# old dotfile backup directory
-files="bashrc vimrc sshrc"	# list of files/folders to symlink in homedir
+files="bashrc vimrc sshrc bash_aliases"	# list of files/folders to symlink in homedir
 
 #########
 
@@ -17,7 +17,7 @@ echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
 mkdir -p $olddir
 echo "done"
 
-# chane to the dotfiles firectory
+# change to the dotfiles firectory
 echo -n "Changing to the $dir directory ..."
 cd $dir
 echo "done"
@@ -30,5 +30,5 @@ for file in $files; do
 	ln -s $dir/$file ~/.$file
 done
 
-
+# Load the new bashrc file
 source ~/.bashrc
