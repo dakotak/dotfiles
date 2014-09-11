@@ -15,9 +15,13 @@ Custom VIM envirmonment.
 2. ./dotfiles/make.sh
 
 ## TODO ##
-* .bashrc
-  * Set the prompt path color based on permissions.
-  * Add more git infromation (symbol and color representations
-    * Is my branch ahead of the remote?
-    * Does my brantch match the remote?
+### bashrc ###
+* Set the prompt path color based on permissions.
+* Add more git infromation (symbol and color representations
+  * Is my branch ahead of the remote?
+  * Does my brantch match the remote?
 
+### make.sh ###
+* Check to see if file exits in home directoy before attempting to move it
+* Add argument switches
+  * --force -f Overwrite any existing files in the home directory.
