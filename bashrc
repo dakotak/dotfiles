@@ -25,25 +25,17 @@ shopt -s checkwinsize
 #shopt -s globstar
 
 
+#________________________________________#
 ########## Git Prompt Functions ##########
-parse_git_branch () {
-	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+
+function git_color {
+    local status = "$(git status 2> /dev/null)"
+
+#    if [[ ! $status =~ "
 }
 
-parse_git_tag () {
-	git describe --tags 2> /dev/null
-}
-
-parse_git_branch_or_tag() {
-	local OUT="$(parse_git_branch)"
-	if [ "$OUT" == " ((no branch))" ]; then
-		OUT="($(parse_git_tag))";
-	fi
-	echo $OUT
-}
-
-#PS1="\u@\h:\w\$(parse_git_branch_or_tag) $ "
 ########## End Git Prompt ##########
+
 
 
 # make less more friendly for non-text input files, see lesspipe(1)
@@ -75,13 +67,16 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+####################################################################################
+# # # # # # # # # # # # #    C U S T O M  P R O M P T S    # # # # # # # # # # # # #
+####################################################################################
 if [ "$color_prompt" = yes ]; then
     # PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-    # Adding in my custom prompt here...
-    PS1='${debian_chroot:+($debian_chroot)}(Color )\[\e[01;32m\]\u@\h\[\e[00m\]:\[\e[01;34m\]\w\[\e[00m\]\$ '
+    # Adding in my custom prompt here
+    PS1='${debian_chroot:+($debian_chroot)}\[\e[01;32m\]\u\@\h\[\e[00m\]:\[\e[01;34m\]\w\[\e[00m\]\$ '
 else
     # PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-    # Custom non color prompt here...
+    # Custom non color prompt here
     PS1='${debian_chroot:+($debian_chroot)}(No Color) \u@\h:\w\$ '
 fi
 unset color_prompt force_color_prompt
