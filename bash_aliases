@@ -4,3 +4,7 @@
 # @description  This file contains a list of custom aliaes to be useed in the bash
 
 alias cls='clear'
+alias c='clear'
+
+# Git Aliases
+alias gc='git commit'
