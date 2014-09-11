@@ -90,7 +90,7 @@ fi
 if [ "$color_prompt" = yes ]; then
     # PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
     # Adding in my custom prompt here
-    PS1='${debian_chroot:+($debian_chroot)}\[\e[01;32m\]\u\[\e[0m\]@\h\[\e[00m\]:\[\e[01;34m\]\w\[\e[00m\] `gitPrompt`\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\e[1;32m\]\u\[\e[0m\]@\[\e[1;30m\]\h\[\e[0m\]:\[\e[0;36m\]\w\[\e[0m\] `gitPrompt`\$ '
 else
     # PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
     # Custom non color prompt here
