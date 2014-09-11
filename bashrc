@@ -28,11 +28,28 @@ shopt -s checkwinsize
 #________________________________________#
 ########## Git Prompt Functions ##########
 
-function git_color {
-    local status = "$(git status 2> /dev/null)"
-
-#    if [[ ! $status =~ "
+function git_branch {
+    git branch 2> /dev/null | sed -n 's/^\*.\(.*\)/\1/p'
 }
+function git_status {
+    local status="$(git status --porcelain 2> /dev/null)"
+    
+    # If git status --porcelain is null then our branch is clean
+    if [ -z "$status" ]; then
+        # Branch is clean, echo out green
+        printf "\e[1;32m"
+    else
+        # Branch may be ahead or dirty... this is a TODO
+        printf "\e[1;31m"
+    fi
+}
+function gitPrompt {
+    # First check to make sure that this is a GIT repository
+    if [ -z "`git status 2>&1 | sed -n 's/^fatal:.*/$/p'`" ]; then
+        printf "(`git_status && git_branch`\e[0m)"
+    fi
+}
+
 
 ########## End Git Prompt ##########
 
@@ -73,7 +90,7 @@ fi
 if [ "$color_prompt" = yes ]; then
     # PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
     # Adding in my custom prompt here
-    PS1='${debian_chroot:+($debian_chroot)}\[\e[01;32m\]\u\@\h\[\e[00m\]:\[\e[01;34m\]\w\[\e[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\e[01;32m\]\u\[\e[0m\]@\h\[\e[00m\]:\[\e[01;34m\]\w\[\e[00m\] `gitPrompt`\$ '
 else
     # PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
     # Custom non color prompt here
