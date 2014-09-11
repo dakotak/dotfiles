@@ -12,3 +12,7 @@ Custom VIM envirmonment.
 ## TODO ##
 * .bashrc
 ..* Set the prompt path color based on permissions.
+..* Add more git infromation (symbol and color representations
+...* Is my branch ahead of the remote?
+...* Does my brantch match the remote?
+
