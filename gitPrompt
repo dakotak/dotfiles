@@ -1,0 +1,17 @@
+#!/bin/bash
+# @author        Dakota Knutson <dakota@ddev.im>
+# @data          09-11-14
+# @file          gitPrompt
+# @version       0.1
+# @description   This file contains the function, or functions that make the git info in the PS1 prompt work.
+
+# TODO
+#  Use git plumbing to get this information to ensure this works well in the future.
+
+# Get the output of git status, we should be able to get most of the info we need from this.
+gitStatus=$(git status -sb)
+
+# Parse the get status into its parts.
+branch=$(sed -n 's/^##\s\(.*\)/\1/p' <<< "$gitStatus")
+
+
