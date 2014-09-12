@@ -25,3 +25,4 @@ Custom VIM envirmonment.
 * Check to see if file exits in home directoy before attempting to move it
 * Add argument switches
   * --force -f Overwrite any existing files in the home directory.
+  * --update -u Get the most up to date version from github.
