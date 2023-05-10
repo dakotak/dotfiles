@@ -4,7 +4,7 @@
 --- defaults write org.hammerspoon.Hammerspoon MJConfigFile "~/.config/hammerspoon/init.lua"
 --- source: https://github.com/Hammerspoon/hammerspoon/issues/1734
 
-print("Loading Hammerspoon config... YAYAYAYAYAYAYA")
+print("Loading Hammerspoon config...")
 
 
 ---------- Load 3rd party Spoons -----------------------------------------------
@@ -47,6 +47,7 @@ hyper.bindKey('i', function()
 end)
 
 hyper.bindKey('t', function()
+    -- TODO: Make this always go to a specific iTerm window (first, or maybe fullscreen)
     hs.application.launchOrFocus("iTerm")
 end)
 
