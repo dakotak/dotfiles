@@ -37,3 +37,5 @@ cask "visual-studio-code"
 # Install Fonts
 cask "font-fira-code"
 cask "font-hack-nerd-font"
+cask "font-source-code-pro"
+
