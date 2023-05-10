@@ -4,6 +4,11 @@
 
 set -e
 
+
+# Change into the directory this script is in
+cd "$(dirname "$0")"
+
+
 # Install OSX Command Line Tools
 if ! xcode-select -v > /dev/null 2>&1; then
   echo "Installing xcode-select"
