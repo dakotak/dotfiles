@@ -31,5 +31,9 @@ STOW_PACKAGES=(
 stow ${STOW_PACKAGES[@]}
 
 
+# Reload zsh config
+source ~/.config/zsh/.zshrc
+
+
 # Update Hammerspoon default config location
 defaults write org.hammerspoon.Hammerspoon MJConfigFile "~/.config/hammerspoon/init.lua"
