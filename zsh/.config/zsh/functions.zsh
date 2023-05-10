@@ -1,14 +1,5 @@
 
-function venv {
-    # Create the venv if it does not exist
-    if [[ ! -d .venv ]]; then
-        echo "Creating new Python virtual environment"
-        python3 -m venv .venv
-    fi
-    # Activate the virtual env
-    echo "Activating Python virtual environement"
-    source .venv/bin/activate
-}
+
 
 
 
@@ -36,4 +27,23 @@ function repo() {
 
     # Run the comamnd with the selected repo
     $1 $REPO
+}
+
+
+# https://stackoverflow.com/questions/46721797/how-to-change-the-terminal-title
+function title() {
+    # Set the terminal title
+    echo -ne "\033]0;$1\007"
+}
+
+
+function venv {
+    # Create the venv if it does not exist
+    if [[ ! -d .venv ]]; then
+        echo "Creating new Python virtual environment"
+        python3 -m venv .venv
+    fi
+    # Activate the virtual env
+    echo "Activating Python virtual environement"
+    source .venv/bin/activate
 }
