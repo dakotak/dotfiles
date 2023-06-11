@@ -5,6 +5,7 @@ tap "homebrew/cask-fonts"
 
 # Install CLI Apps
 brew "bat"
+brew "direnv"
 brew "fzf"
 brew "gh"
 brew "gnupg" if OS.mac?
