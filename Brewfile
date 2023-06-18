@@ -17,6 +17,7 @@ brew "python@3.10"
 brew "ripgrep"
 brew "shellcheck"
 brew "stow"
+brew "go-task"
 brew "teip"
 brew "tmux"
 brew "tree"
@@ -24,6 +25,7 @@ brew "zstd"
 
 
 # Install GUI Apps
+cask "db-browser-for-sqlite"
 # cask "google-chrome"
 cask "hammerspoon"
 cask "iterm2"
@@ -33,7 +35,6 @@ cask "maccy"
 cask "signal"
 cask "spotify"
 cask "visual-studio-code"
-cask "db-browser-for-sqlite"
 
 
 # Install Fonts
