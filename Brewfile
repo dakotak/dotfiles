@@ -33,6 +33,7 @@ cask "maccy"
 cask "signal"
 cask "spotify"
 cask "visual-studio-code"
+cask "db-browser-for-sqlite"
 
 
 # Install Fonts
