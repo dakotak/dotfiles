@@ -23,3 +23,6 @@ autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
 # https://superuser.com/questions/1245273/iterm2-version-3-individual-history-per-tab
+
+# Install direvn shell hooks
+eval "$(direnv hook zsh)"

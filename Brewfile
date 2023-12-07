@@ -5,6 +5,8 @@ tap "homebrew/cask-fonts"
 
 # Install CLI Apps
 brew "bat"
+brew "direnv"
+brew "entr"
 brew "fzf"
 brew "gh"
 brew "gnupg" if OS.mac?
@@ -16,6 +18,7 @@ brew "python@3.10"
 brew "ripgrep"
 brew "shellcheck"
 brew "stow"
+brew "go-task"
 brew "teip"
 brew "tmux"
 brew "tree"
@@ -24,6 +27,7 @@ brew "findutils" if OS.mac?
 brew "coreutils" if OS.mac?
 
 # Install GUI Apps
+cask "db-browser-for-sqlite"
 # cask "google-chrome"
 cask "hammerspoon"
 cask "iterm2"
