@@ -11,14 +11,16 @@ function repo() {
         return 1
     fi
 
-    REPO=$(find $REPO_DIRS \
+    REPO=$(find ${REPO_DIRS[@]} \
+        -maxdepth ${REPO_SEARCH_MAXDEPTH:-3} \
+        -mindepth 1 \
         -type d \
         -execdir test -d {}/.git \; \
-        -print \
         -prune \
-        -maxdepth 6 \
-        -mindepth 1 \
-        | fzf)
+        -print \
+        | xargs grealpath --relative-to=$HOME \
+        | fzf --preview='cat ~/{}/README.md | gum format --type=markdown'
+    )
 
     if [[ -z $REPO ]]; then
         echo "No repo selected"

@@ -20,7 +20,8 @@ brew "teip"
 brew "tmux"
 brew "tree"
 brew "zstd"
-
+brew "findutils" if OS.mac?
+brew "coreutils" if OS.mac?
 
 # Install GUI Apps
 # cask "google-chrome"
