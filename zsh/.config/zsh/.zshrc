@@ -4,6 +4,8 @@
 # Use vim mode
 set -o vi
 
+# Hide Homebrew hints
+export HOMEBREW_NO_ENV_HINTS=1
 
 for f in $(ls ~/.config/zsh/*.zsh); do
     source $f
