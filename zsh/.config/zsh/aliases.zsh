@@ -1,5 +1,6 @@
 
 # Aliases
+alias dc=docker-compose
 alias ll="ls -al"
 alias ls="ls --color=auto"
 alias python=python3
