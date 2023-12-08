@@ -25,6 +25,7 @@ brew "tree"
 brew "zstd"
 brew "findutils" if OS.mac?
 brew "coreutils" if OS.mac?
+brew "watch" if OS.mac?
 
 # Install GUI Apps
 cask "db-browser-for-sqlite"
