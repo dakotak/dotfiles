@@ -6,6 +6,7 @@ tap "homebrew/cask-fonts"
 # Install CLI Apps
 brew "bat"
 brew "direnv"
+brew "d2"
 brew "entr"
 brew "fzf"
 brew "gh"
