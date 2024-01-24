@@ -1,6 +1,5 @@
 
 
-tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 
 # Install CLI Apps
