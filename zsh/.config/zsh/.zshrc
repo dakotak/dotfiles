@@ -25,8 +25,11 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 # https://superuser.com/questions/1245273/iterm2-version-3-individual-history-per-tab
 
 # Install direvn shell hooks
-eval "$(direnv hook zsh)"
+if type direnv &> /dev/null; then
+    eval "$(direnv hook zsh)"
+fi
 
+# Initialize zoxide (z)
 if type zoxide &> /dev/null; then
     eval "$(zoxide init zsh)"
 fi
