@@ -26,3 +26,8 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
 # Install direvn shell hooks
 eval "$(direnv hook zsh)"
+
+if type zoxide &> /dev/null; then
+    eval "$(zoxide init zsh)"
+fi
+
