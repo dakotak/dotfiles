@@ -22,6 +22,7 @@ brew "go-task"
 brew "teip"
 brew "tmux"
 brew "tree"
+brew "zoxide"
 brew "zstd"
 brew "findutils" if OS.mac?
 brew "coreutils" if OS.mac?
