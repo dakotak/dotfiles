@@ -17,6 +17,7 @@ hs.loadSpoon("Caffeine")
 local hyper = require('hyper')
 
 require('window-management')
+require('functions')
 
 
 ---------- Hypermode hotkeys ---------------------------------------------------
@@ -57,4 +58,8 @@ end)
 
 hyper.bindKey('p', function()
     hs.application.launchOrFocus("Spotify")
+end)
+
+hyper.bindKey('o', function()
+    hs.application.launchOrFocus("Obsidian")
 end)
