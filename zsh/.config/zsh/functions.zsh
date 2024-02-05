@@ -1,8 +1,4 @@
 
-
-
-
-
 # TODO: Display a shorter path in FZF instead of the full path
 function repo() {
     # Verify the local REPO_DIRS array exists
@@ -38,14 +34,18 @@ function title() {
     echo -ne "\033]0;$1\007"
 }
 
-
+# Activate a vitual environment in the current directory
+# If the virtual environment does not exist it will be created then activated
+# First argument is the name of the virtual environment, default is .venv
 function venv {
+    VENV=${1:-.venv}
     # Create the venv if it does not exist
-    if [[ ! -d .venv ]]; then
-        echo "Creating new Python virtual environment"
-        python3 -m venv .venv
+    if [[ ! -d $VENV ]]; then
+        echo "Creating new Python virtual environment ($VENV)"
+        python3 -m venv $VENV
     fi
     # Activate the virtual env
-    echo "Activating Python virtual environement"
-    source .venv/bin/activate
+    echo "Activating Python virtual environement ($VENV)"
+    source $VENV/bin/activate
 }
+
