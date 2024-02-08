@@ -30,6 +30,7 @@ brew bundle
 
 STOW_PACKAGES=(
   hammerspoon
+  lsd
   nvim
   zsh
 )
