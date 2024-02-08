@@ -2,7 +2,7 @@
 # Aliases
 alias dc=docker-compose
 alias ll="ls -al"
-alias ls="ls --color=auto"
+alias ls=lsd
 alias python=python3
 alias ql="qlmanage -p" # Quick Look
 alias tf=terraform
