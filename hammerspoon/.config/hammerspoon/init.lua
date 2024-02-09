@@ -6,6 +6,17 @@
 
 print("Loading Hammerspoon config...")
 
+-- Reload config automatically
+local configFileWatcher
+function reloadConfig()
+print("Reloading Hammerspoon config...")
+  configFileWatcher:stop()
+  configFileWatcher = nil
+  hs.reload()
+end
+
+configFileWatcher = hs.pathwatcher.new(os.getenv("HOME") .. "/.config/hammerspoon/", reloadConfig)
+configFileWatcher:start()
 
 ---------- Load 3rd party Spoons -----------------------------------------------
 --------------------------------------------------------------------------------
