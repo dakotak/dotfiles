@@ -32,18 +32,20 @@ STOW_PACKAGES=(
   hammerspoon
   lsd
   nvim
+  scripts
   zsh
 )
 
-echo "Deploying config dotfiles..."
+echo "Deploying stow packages..."
 # Use stow to create symlinks for config files
 stow ${STOW_PACKAGES[@]}
-
-
-# Reload zsh config
-source ~/.config/zsh/.zshrc
 
 
 echo "Updating hammerspoon default config location..."
 # Update Hammerspoon default config location
 defaults write org.hammerspoon.Hammerspoon MJConfigFile "~/.config/hammerspoon/init.lua"
+
+
+# Replace with new zsh process to apply changes
+# source ~/.config/zsh/.zshrc
+exec zsh
