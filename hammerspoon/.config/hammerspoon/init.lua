@@ -50,27 +50,33 @@ hyper.bindKey('l', hs.grid.pushWindowRight)
 ---------- GOTO Application Hotkeys --------------------------------------------
 --------------------------------------------------------------------------------
 
+-- Slack
 hyper.bindKey('s', function()
-    hs.application.launchOrFocus("Slack")
+    launchOrFocus("Slack")
 end)
 
+-- Signal
 hyper.bindKey('i', function()
-    hs.application.launchOrFocus("Signal")
+    launchOrFocus("Signal")
 end)
 
+-- iTerm
 hyper.bindKey('t', function()
     -- TODO: Make this always go to a specific iTerm window (first, or maybe fullscreen)
-    hs.application.launchOrFocus("iTerm")
+    launchOrFocus("iTerm")
 end)
 
+-- Zoom
 hyper.bindKey('z', function()
-    hs.application.launchOrFocus("zoom.us")
+    launchOrFocus("zoom.us")
 end)
 
+-- Spotify
 hyper.bindKey('p', function()
-    hs.application.launchOrFocus("Spotify")
+    launchOrFocus("Spotify")
 end)
 
+-- Obsidian
 hyper.bindKey('o', function()
-    hs.application.launchOrFocus("Obsidian")
+    launchOrFocus("Obsidian")
 end)
