@@ -13,6 +13,7 @@ brew "gnupg" if OS.mac?
 brew "gum"
 brew "hr"
 brew "jq"
+brew "lsd"
 brew "neovim"
 brew "python@3.10"
 brew "ripgrep"
