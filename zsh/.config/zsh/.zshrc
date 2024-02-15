@@ -1,4 +1,7 @@
 
+
+# https://github.com/unixorn/awesome-zsh-plugins#generic-zsh
+
 # https://scriptingosx.com/2019/07/moving-to-zsh-06-customizing-the-zsh-prompt/
 
 # Use vim mode
@@ -10,6 +13,43 @@ export HOMEBREW_NO_ENV_HINTS=1
 for f in $(ls ~/.config/zsh/*.zsh); do
     source $f
 done
+
+
+# Plugins: https://github.com/unixorn/awesome-zsh-plugins#plugins
+# Load antidote, a zsh plugin manager
+# https://getantidote.github.io/
+source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
+# Change the default plugin file name
+zstyle ':antidote:bundle' file ${ZDOTDIR:-$HOME}/.zsh_plugins
+antidote load
+
+# Load antigen, a zsh plugin manager
+# source $HOMEBREW_PREFIX/share/antigen/antigen.zsh
+# # Load the oh-my-zsh's library
+# antigen use oh-my-zsh
+# antigen bundle <<EOBUNDLES
+#     # Bundles from the default repo (robbyrussell's oh-my-zsh)
+#     # git
+
+#     # Syntax highlighting bundle.
+#     # zsh-users/zsh-syntax-highlighting
+#     zdharma-continuum/fast-syntax-highlighting
+
+#     # Fish-like auto suggestions
+#     zsh-users/zsh-autosuggestions
+
+#     # Extra zsh completions
+#     # zsh-users/zsh-completions
+# EOBUNDLES
+# # Tell antigen that you're done
+# antigen apply
+
+
+# Alturnative plugin loaders
+# - https://github.com/marlonrichert/zsh-snap
+# - https://github.com/zsh-users/antigen
+#   - https://github.com/zsh-users/antigen/wiki/Cookbook#init-command
+
 
 export EDITOR="nvim"
 

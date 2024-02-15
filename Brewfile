@@ -3,6 +3,7 @@
 tap "homebrew/cask-fonts"
 
 # Install CLI Apps
+brew "antidote"
 brew "bat"
 brew "direnv"
 brew "d2"
