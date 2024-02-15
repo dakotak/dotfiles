@@ -31,6 +31,6 @@ fi
 
 # Initialize zoxide (z)
 if type zoxide &> /dev/null; then
-    eval "$(zoxide init zsh)"
+    eval "$(zoxide init --cmd cd zsh)"
 fi
 
