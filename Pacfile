@@ -12,6 +12,7 @@ go # Go lang
 jq
 less
 lsd
+moreutils # https://joeyh.name/code/moreutils/
 neovim
 ripgrep
 shellcheck
