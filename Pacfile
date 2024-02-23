@@ -9,6 +9,7 @@ github-cli
 gnupg
 go # Go lang
 jq
+less
 lsd
 neovim
 ripgrep
