@@ -38,7 +38,7 @@ esac
 
 
 # Use stow to create symlinks for config files
-echo "Deploying stow packages (${STOW_PACKAGES[@]})..."
+echo "Deploying stow packages (${STOW_PACKAGES[*]})..."
 stow "${STOW_PACKAGES[@]}"
 
 
