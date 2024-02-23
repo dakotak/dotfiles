@@ -12,6 +12,10 @@ case $(uname) in
     Darwin)
         # Hide Homebrew hints
         export HOMEBREW_NO_ENV_HINTS=1
+        ANTIDOTE_ZSH="$(brew --prefix)/opt/antidote/share/antidote/antidote.zsh"
+        ;;
+    Linux)
+        ANTIDOTE_ZSH=/usr/share/zsh-antidote/antidote.zsh
         ;;
 esac
 
@@ -22,17 +26,18 @@ for f in "$HOME"/.config/zsh/*.zsh; do
 done
 
 
-# Plugins: https://github.com/unixorn/awesome-zsh-plugins#plugins
 # Load antidote, a zsh plugin manager
 # https://getantidote.github.io/
 # Check if antidote is installed
-if type antidote &> /dev/null; then
+if [ -f "$ANTIDOTE_ZSH" ]; then
     # shellcheck disable=SC1091
-    source "$(brew --prefix)/opt/antidote/share/antidote/antidote.zsh"
-    # Change the default plugin file name
+    source "$ANTIDOTE_ZSH"
+    # Change the default zsh antidote plugin file name
     zstyle ':antidote:bundle' file "${ZDOTDIR:-$HOME}/.zsh_plugins"
+    # Plugins: https://github.com/unixorn/awesome-zsh-plugins#plugins
     antidote load
 fi
+
 
 # Load antigen, a zsh plugin manager
 # source $HOMEBREW_PREFIX/share/antigen/antigen.zsh
