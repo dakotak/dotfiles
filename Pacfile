@@ -1,8 +1,10 @@
+base-devel
 bat
 code
 d2
 firefox
 fzf
+git
 github-cli
 gnupg
 go # Go lang
