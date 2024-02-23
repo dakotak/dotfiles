@@ -1,4 +1,3 @@
-# TODO: Install man pages
 base-devel
 bat
 code
@@ -9,9 +8,11 @@ git
 github-cli
 gnupg
 go # Go lang
+gum
 jq
 less
 lsd
+man-db
 moreutils # https://joeyh.name/code/moreutils/
 neovim
 ripgrep
