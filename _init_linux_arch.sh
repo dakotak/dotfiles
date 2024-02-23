@@ -6,11 +6,10 @@ ANTIDOTE_FILE=/usr/share/zsh-antidote/antidote.zsh
 
 # Remove comments and blank lines from Pacfile pass the resulting list of packages to pacman
 # Compair what is already installed to what is in the pacfile to determin what is missing
-MISSING_PACKAGES=( $(\
-  comm -13 \
+mapfile -t MISSING_PACKAGES < <(comm -13 \
     <(pacman -Qqn | sort) \
-    <(sed '/^[[:blank:]]*#/d;/^[[:blank:]]*$/d;s/[[:blank:]]*#.*//' Pacfile | sort)
-) )
+    <(sed '/^[[:blank:]]*#/d;/^[[:blank:]]*$/d;s/[[:blank:]]*#.*//' Pacfile | sort) \
+)
 # NOTE: List packages installed from non official repos: `pacman -Qm`
 
 if [ ${#MISSING_PACKAGES[@]} -gt 0 ]; then
@@ -44,4 +43,8 @@ fi
 
 # Build the man page cache
 # TODO: Do package installs trigger this or do I need to run this?
-sudo mandb
+if sudo -n true &> /dev/null; then
+  gum spin --title "Updating man-db..." -- sudo mandb
+else
+  sudo mandb
+fi
