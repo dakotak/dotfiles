@@ -15,7 +15,8 @@ MISSING_PACKAGES=( $(\
 
 if [ ${#MISSING_PACKAGES[@]} -gt 0 ]; then
   echo "Installing missing packages via pacman..."
-  sudo pacman -S --needed "$MISSING_PACKAGES"
+  echo "Missing packages: ${MISSING_PACKAGES[*]}"
+  sudo pacman -S --needed "${MISSING_PACKAGES[@]}"
 else
   echo "No new pacman packages to install!"
 fi
@@ -39,3 +40,8 @@ if [ ! -f "$ANTIDOTE_FILE" ] &> /dev/null; then
   echo "Installing antidote..."
   yay -S zsh-antidote
 fi
+
+
+# Build the man page cache
+# TODO: Do package installs trigger this or do I need to run this?
+sudo mandb
