@@ -8,7 +8,7 @@ ANTIDOTE_FILE=/usr/share/zsh-antidote/antidote.zsh
 # Compair what is already installed to what is in the pacfile to determin what is missing
 MISSING_PACKAGES=( $(\
   comm -13 \
-    <(pacman -Qq | sort) \
+    <(pacman -Qqn | sort) \
     <(sed '/^[[:blank:]]*#/d;/^[[:blank:]]*$/d;s/[[:blank:]]*#.*//' Pacfile | sort)
 ) )
 # NOTE: List packages installed from non official repos: `pacman -Qm`
