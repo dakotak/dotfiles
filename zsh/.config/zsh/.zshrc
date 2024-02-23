@@ -1,4 +1,5 @@
 
+# shellcheck shell=bash
 
 # https://github.com/unixorn/awesome-zsh-plugins#generic-zsh
 
@@ -7,21 +8,31 @@
 # Use vim mode
 set -o vi
 
-# Hide Homebrew hints
-export HOMEBREW_NO_ENV_HINTS=1
+case $(uname) in
+    Darwin)
+        # Hide Homebrew hints
+        export HOMEBREW_NO_ENV_HINTS=1
+        ;;
+esac
 
-for f in $(ls ~/.config/zsh/*.zsh); do
-    source $f
+
+for f in "$HOME"/.config/zsh/*.zsh; do
+    # shellcheck disable=SC1090
+    source "$f"
 done
 
 
 # Plugins: https://github.com/unixorn/awesome-zsh-plugins#plugins
 # Load antidote, a zsh plugin manager
 # https://getantidote.github.io/
-source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
-# Change the default plugin file name
-zstyle ':antidote:bundle' file ${ZDOTDIR:-$HOME}/.zsh_plugins
-antidote load
+# Check if antidote is installed
+if type antidote &> /dev/null; then
+    # shellcheck disable=SC1091
+    source "$(brew --prefix)/opt/antidote/share/antidote/antidote.zsh"
+    # Change the default plugin file name
+    zstyle ':antidote:bundle' file "${ZDOTDIR:-$HOME}/.zsh_plugins"
+    antidote load
+fi
 
 # Load antigen, a zsh plugin manager
 # source $HOMEBREW_PREFIX/share/antigen/antigen.zsh
@@ -73,4 +84,3 @@ fi
 if type zoxide &> /dev/null; then
     eval "$(zoxide init --cmd cd zsh)"
 fi
-

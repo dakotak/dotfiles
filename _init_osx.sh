@@ -1,5 +1,10 @@
 #!/bin/bash
 
+echo "Running OSX init..."
+
+# Include hammerspoon config for OSX
+STOW_PACKAGES+=(hammerspoon)
+
 # Install OSX Command Line Tools
 if ! xcode-select -v > /dev/null 2>&1; then
   echo "Installing xcode-select..."
@@ -21,4 +26,4 @@ brew bundle
 
 echo "Updating hammerspoon default config location..."
 # Update Hammerspoon default config location
-defaults write org.hammerspoon.Hammerspoon MJConfigFile "~/.config/hammerspoon/init.lua"
+defaults write org.hammerspoon.Hammerspoon MJConfigFile "$HOME/.config/hammerspoon/init.lua"
