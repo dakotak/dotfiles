@@ -20,12 +20,12 @@ STOW_PACKAGES=(
 case $(uname) in
   # Mac OSX
   Darwin)
-    source init/_init_osx.sh
+    source .init_scripts/_init_osx.sh
     ;;
 
   Linux)
     osID=$(grep -Po '(?<=^ID=).*' /etc/os-release)
-    initFile="init/_init_linux_$osID.sh"
+    initFile=".init_scripts/_init_linux_$osID.sh"
     if [ -f "$initFile" ]; then
       echo "Running init file for $osID linux..."
       # shellcheck disable=SC1090
