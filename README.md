@@ -2,6 +2,7 @@
 
 ![header image](image.webp)
 
+These are my personal dotfiles. They work on both Mac OSX and Linux (Arch). One of my goals with these configurations is to make them flexible to work as a baseline for both my work systems and personal systems.
 ## Instructions
 - Clone Repo to home directory
 - Change directory into `dotfiles`
