@@ -19,12 +19,12 @@ STOW_PACKAGES=(
 case $(uname) in
   # Mac OSX
   Darwin)
-    source _init_osx.sh
+    source init/_init_osx.sh
     ;;
 
   Linux)
     osID=$(grep -Po '(?<=^ID=).*' /etc/os-release)
-    initFile="_init_linux_$osID.sh"
+    initFile="init/_init_linux_$osID.sh"
     if [ -f "$initFile" ]; then
       echo "Running init file for $osID linux..."
       # shellcheck disable=SC1090
@@ -38,8 +38,8 @@ esac
 
 
 # Use stow to create symlinks for config files
-echo "Deploying stow packages (${STOW_PACKAGES[*]})..."
-stow "${STOW_PACKAGES[@]}"
+echo "Stowing packages (${STOW_PACKAGES[*]})..."
+stow --target="$HOME/" --dir=stow_packages "${STOW_PACKAGES[@]}"
 
 
 # Replace with new zsh process to apply changes
