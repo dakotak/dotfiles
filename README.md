@@ -31,3 +31,10 @@ The following applications are installed via [brew](https://brew.sh/).
 | [tree]() |  |
 | [zoxide](https://github.com/ajeetdsouza/zoxide) | A smarter cd command. Supports all major shells. |
 | [zstd](https://github.com/facebook/zstd) | Zstandard - Fast real-time compression algorithm |
+
+
+## Espanso (Macros)
+This is a list of custom [Espanso](https://espanso.org/) macros/text expansions I have added.
+
+- `:jl` - Reads Jira issue link from clipboard as a markdown link
+
