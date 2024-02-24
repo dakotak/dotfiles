@@ -13,6 +13,7 @@ STOW_PACKAGES=(
   nvim
   scripts
   zsh
+  espanso
 )
 
 
