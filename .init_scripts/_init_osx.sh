@@ -13,15 +13,20 @@ fi
 
 
 # Check to see if brew is installed, and install it if it isn't
-if ! [ -x "$(command -v brew)" ]; then
+if ! type brew &> /dev/null; then
   echo "Installing Homebrew..."
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 
-echo "Installing brew packages..."
 # Install brew packages
-brew bundle
+if type gum &> /dev/null; then
+  gum spin --spinner=line --title="Installing brew packages..." -- brew bundle
+else
+  echo "Installing brew packages..."
+  brew bundle
+fi
+
 
 
 echo "Updating hammerspoon default config location..."
