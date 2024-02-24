@@ -11,6 +11,7 @@ gnupg
 go # Go lang
 gum
 jq
+kitty
 less
 lsd
 man-db
