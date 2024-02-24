@@ -1,5 +1,6 @@
 # Dotfiles
 
+![header image](image.webp)
 ## Instructions
 - Clone Repo to home directory
 - Change directory into `dotfiles`
