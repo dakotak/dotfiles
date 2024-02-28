@@ -47,12 +47,13 @@ do
 end
 -- }}}
 
+
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-if not beautiful.init("theme.lua") then
+if not beautiful.init(gears.filesystem.get_configuration_dir() .. "theme.lua") then
     naughty.notify({
         preset = naughty.config.presets.critical,
-        title = "Oops, there were errors during startup!",
+        title = "Oops, there were errors with the theme!",
         text = "Failed to load theme.lua"
     })
     -- Load default theme
