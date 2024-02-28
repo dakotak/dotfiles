@@ -3,6 +3,9 @@
 local gears = require("gears")
 local awful = require("awful")
 local hotkeys_popup = require("awful.hotkeys_popup")
+-- Theme handling library
+local beautiful = require("beautiful")
+
 
 -- TODO: Make this modkey only defined in a sinle place
 modkey = "Mod4"
