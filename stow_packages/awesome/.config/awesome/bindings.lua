@@ -2,7 +2,7 @@
 -- Standard awesome library
 local gears = require("gears")
 local awful = require("awful")
-
+local hotkeys_popup = require("awful.hotkeys_popup")
 
 -- TODO: Make this modkey only defined in a sinle place
 modkey = "Mod4"
