@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Add linux specific stow packages
+STOW_PACKAGES+=(awesome)
+
 
 ANTIDOTE_FILE=/usr/share/zsh-antidote/antidote.zsh
 
