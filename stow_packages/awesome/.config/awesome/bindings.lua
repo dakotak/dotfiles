@@ -1,4 +1,9 @@
 
+-- Standard awesome library
+local gears = require("gears")
+local awful = require("awful")
+
+
 -- TODO: Make this modkey only defined in a sinle place
 modkey = "Mod4"
 
