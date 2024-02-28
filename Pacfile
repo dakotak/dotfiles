@@ -18,6 +18,7 @@ man-db
 moreutils # https://joeyh.name/code/moreutils/
 neovim
 ripgrep
+rofi
 shellcheck
 stow
 go-task
