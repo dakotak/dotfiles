@@ -9,11 +9,12 @@ cd "$(dirname "$0")"
 
 # Default stow packages (sourced subscripts can add items to this array)
 STOW_PACKAGES=(
+  espanso
+  kitty
   lsd
   nvim
   scripts
   zsh
-  espanso
 )
 
 
