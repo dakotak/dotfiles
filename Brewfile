@@ -12,6 +12,7 @@ brew "entr"
 brew "fzf"
 brew "gh"
 brew "gnupg" if OS.mac?
+brew "gping"
 brew "gum"
 brew "hr"
 brew "jq"
