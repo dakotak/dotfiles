@@ -80,3 +80,13 @@ end)
 hyper.bindKey('o', function()
     launchOrFocus("Obsidian")
 end)
+
+-- New iTerm Window
+hyper.bindKey('i', function()
+    local app = hs.application.get("iTerm")
+    if app then
+        app:selectMenuItem({"Shell", "New Window"})
+    else
+        launchOrFocus("iTerm")
+    end
+end)

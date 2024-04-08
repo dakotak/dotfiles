@@ -36,4 +36,9 @@ function This.bindKey(key, handler)
     This.hyperMode:bind({}, key, handler)
 end
 
+-- Function to bind with modifiers
+function This.bindKeyWithModifiers(modifiers, key, handler)
+    This.hyperMode:bind(modifiers, key, handler)
+end
+
 return This
