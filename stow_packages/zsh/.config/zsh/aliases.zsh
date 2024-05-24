@@ -13,3 +13,4 @@ alias vi=vim
 alias vim=nvim
 alias zrc="vim $ZDOTDIR/.zshrc; source $ZDOTDIR/.zshrc"
 alias reloadzsh="source $ZDOTDIR/.zshrc"
+alias wax=watchexec
