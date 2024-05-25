@@ -102,7 +102,7 @@ vim.g.have_nerd_font = true
 vim.opt.number = true
 -- You can also add relative line numbers, to help with jumping.
 --  Experiment for yourself to see if you like it!
--- vim.opt.relativenumber = true
+vim.opt.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
@@ -126,7 +126,8 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 -- Keep signcolumn on by default
-vim.opt.signcolumn = 'yes'
+-- vim.opt.signcolumn = 'yes'
+vim.opt.signcolumn = 'number'
 
 -- Decrease update time
 vim.opt.updatetime = 250
@@ -254,6 +255,32 @@ require('lazy').setup({
         delete = { text = '_' },
         topdelete = { text = '‾' },
         changedelete = { text = '~' },
+      },
+    },
+  },
+
+  -- Githun Copilot integration
+  { 'github/copilot.vim' },
+
+  -- Markdown preview using Glow
+  { 'ellisonleao/glow.nvim' },
+
+  -- Column rulers
+  { 'Bekaboo/deadcolumn.nvim' },
+
+  -- Underline all instances of word under the cursor
+  {
+    'yamatsum/nvim-cursorline',
+    opts = {
+      cursorline = {
+        enable = true,
+        timeout = 1000,
+        number = false,
+      },
+      cusorword = {
+        enable = true,
+        min_length = 3,
+        hl = { underline = true },
       },
     },
   },
@@ -881,12 +908,12 @@ require('lazy').setup({
   --  Here are some example plugins that I've included in the Kickstart repository.
   --  Uncomment any of the lines below to enable them (you will need to restart nvim).
   --
-  -- require 'kickstart.plugins.debug',
-  -- require 'kickstart.plugins.indent_line',
-  -- require 'kickstart.plugins.lint',
-  -- require 'kickstart.plugins.autopairs',
-  -- require 'kickstart.plugins.neo-tree',
-  -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
+  require 'kickstart.plugins.debug',
+  require 'kickstart.plugins.indent_line',
+  require 'kickstart.plugins.lint',
+  require 'kickstart.plugins.autopairs',
+  require 'kickstart.plugins.neo-tree',
+  require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
