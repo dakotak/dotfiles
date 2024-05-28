@@ -285,6 +285,51 @@ require('lazy').setup({
     },
   },
 
+  -- Smooth scrolling
+  { 'karb94/neoscroll.nvim' },
+
+  -- Session management
+  { 'rmagatti/auto-session' },
+
+  -- Status bar
+  { 'nvim-lualine/lualine.nvim' },
+
+  -- Marks manager
+  -- { 'kshenoy/vim-signature' },
+  { 'chentoast/marks.nvim' },
+
+  {
+    'ThePrimeagen/harpoon',
+    branch = 'harpoon2',
+    dependencies = { 'nvim-lua/plenary.nvim' },
+  },
+
+  -- Highlight current codeblock
+  { 'folke/twilight.nvim' },
+
+  -- Breadcrumbs
+  {
+    'utilyre/barbecue.nvim',
+    name = 'barbecue',
+    version = '*',
+    dependencies = {
+      'SmiteshP/nvim-navic',
+      'nvim-tree/nvim-web-devicons', -- optional dependency
+    },
+    opts = {
+      -- configurations go here
+    },
+  },
+
+  -- Floating terminal
+  { 'numToStr/FTerm.nvim' },
+
+  -- Plugins to check out
+  -- https://github.com/romgrk/barbar.nvim or https://github.com/akinsho/bufferline.nvim
+  -- https://github.com/epwalsh/obsidian.nvim
+  -- https://github.com/mateuszwieloch/automkdir.nvim
+  -- https://github.com/yaocccc/nvim-foldsign
+
   -- NOTE: Plugins can also be configured to run Lua code when they are loaded.
   --
   -- This is often very useful to both group configuration, as well as handle
