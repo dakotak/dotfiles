@@ -329,7 +329,11 @@ require('lazy').setup({
   -- https://github.com/epwalsh/obsidian.nvim
   -- https://github.com/mateuszwieloch/automkdir.nvim
   -- https://github.com/yaocccc/nvim-foldsign
+  -- https://github.com/gennaro-tedesco/nvim-peekup
+  -- https://github.com/nvim-pack/nvim-spectre
+  -- https://github.com/crusj/bookmarks.nvim
 
+  
   -- NOTE: Plugins can also be configured to run Lua code when they are loaded.
   --
   -- This is often very useful to both group configuration, as well as handle
