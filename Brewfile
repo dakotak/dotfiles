@@ -27,6 +27,7 @@ brew "go-task"
 brew "teip"
 brew "tmux"
 brew "tree"
+brew "zellij" # Terminal Multiplexer
 brew "zoxide"
 brew "zstd"
 brew "findutils" if OS.mac?
