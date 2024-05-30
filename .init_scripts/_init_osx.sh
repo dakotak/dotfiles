@@ -18,14 +18,20 @@ if ! type brew &> /dev/null; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
+# Check if nix is installed, and install it if it isn't
+if ! type nix &> /dev/null; then
+  echo "Installing Nix..."
+  sh <(curl -L https://nixos.org/nix/install)
+fi
+
 
 # Install brew packages
-if type gum &> /dev/null; then
-  gum spin --spinner=line --title="Installing brew packages..." -- brew bundle
-else
+# if type gum &> /dev/null; then
+#   gum spin --spinner=line --title="Installing brew packages..." -- brew bundle
+# else
   echo "Installing brew packages..."
   brew bundle
-fi
+# fi
 
 
 
