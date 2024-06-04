@@ -1,5 +1,6 @@
 
 # shellcheck shell=bash
+# zmodload zsh/zprof
 
 # https://github.com/unixorn/awesome-zsh-plugins#generic-zsh
 
@@ -69,6 +70,8 @@ fi
 
 export EDITOR="nvim"
 
+# This nvm stuff fucked my zsh start times
+# Related artical: https://medium.com/@dannysmith/little-thing-2-speeding-up-zsh-f1860390f92
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -89,3 +92,5 @@ fi
 if type zoxide &> /dev/null; then
     eval "$(zoxide init --cmd cd zsh)"
 fi
+
+# zprof
