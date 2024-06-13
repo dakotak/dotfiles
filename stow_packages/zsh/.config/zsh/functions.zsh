@@ -1,4 +1,10 @@
 
+# Create a directory and change to it
+function mkcd() {
+    mkdir -p $1
+    cd $1
+}
+
 # TODO: Display a shorter path in FZF instead of the full path
 function repo() {
     # Verify the local REPO_DIRS array exists
