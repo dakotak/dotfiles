@@ -5,34 +5,35 @@ tap "homebrew/cask-fonts"
 # Install CLI Apps
 brew "antidote"
 brew "bat"
+brew "coreutils" if OS.mac?
+brew "d2"
 brew "dialog"
 brew "direnv"
-brew "d2"
 brew "entr"
+brew "findutils" if OS.mac?
 brew "fzf"
 brew "gh"
 brew "gnupg" if OS.mac?
+# brew "go-task"
 brew "gping"
 brew "gum"
 brew "hr"
 brew "jq"
 brew "lsd"
+brew "navi" # Interactive cheatsheet tool for the command-line
 brew "neovim"
 brew "parallel"
 brew "python@3.10"
 brew "ripgrep"
 brew "shellcheck"
 brew "stow"
-# brew "go-task"
 brew "teip"
 brew "tmux"
 brew "tree"
+brew "watch" if OS.mac?
 brew "zellij" # Terminal Multiplexer
 brew "zoxide"
 brew "zstd"
-brew "findutils" if OS.mac?
-brew "coreutils" if OS.mac?
-brew "watch" if OS.mac?
 
 # Install GUI Apps
 cask "db-browser-for-sqlite"
