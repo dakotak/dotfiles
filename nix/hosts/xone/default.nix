@@ -1,8 +1,12 @@
+# Edit this configuration file to define what should be installed on
+# your system.  Help is available in the configuration.nix(5) man page
+# and in the NixOS manual (accessible by running ‘nixos-help’).
+
 { config, pkgs, ... }:
 
 {
   imports =
-    [
+    [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
 
@@ -10,10 +14,14 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "xone";
+  networking.hostName = "xone"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   nix.settings.experimental-features = [ "nix-command" "flakes"];
+
+  # Configure network proxy if necessary
+  # networking.proxy.default = "http://user:password@proxy:port/";
+  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -63,6 +71,10 @@
     pulse.enable = true;
     # If you want to use JACK applications, uncomment this
     #jack.enable = true;
+
+    # use the example session manager (no others are packaged yet so this is enabled by default,
+    # no need to redefine it in your config for now)
+    #media-session.enable = true;
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
@@ -71,6 +83,15 @@
   programs.zsh.enable = true;
   programs.git.enable = true;
 
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  hardware.opengl.enable = true;
+
+  xdg.portal.enable = true;
+  # xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.dakota = {
@@ -85,7 +106,7 @@
     shell = pkgs.zsh;
   };
 
-  # Enable firefox.
+  # Install firefox.
   programs.firefox.enable = true;
 
   # Neovim
@@ -101,28 +122,36 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    wget
-    git
+    (waybar.overrideAttrs (oldAttrs: {
+      mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
+    }))
+
     bat
+    curl
+    dunst
     fzf
+    gcc
+    git
+    gnumake
     gum
     jq
+    libnotify
     parallel
     python3
     ripgrep
-    shellcheck
-    zstd
-    watchexec
-    shellcheck
-    tmux
-    xclip
-    gnumake
-    gcc
-    rustup
-    unzip
-    curl
+    rofi-wayland
     rsync
+    rustup
+    shellcheck
+    shellcheck
+    swww # Wallpaper
+    tmux
+    unzip
+    watchexec
+    waybar
+    wget
+    xclip
+    zstd
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
