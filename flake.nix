@@ -25,7 +25,7 @@
                     home-manager.nixosModules.home-manager{
                         home-manager.extraSpecialArgs = specialArgs;
                     }
-                    ./hosts/xone
+                    ./nix/hosts/xone
                 ];
             };
         };
