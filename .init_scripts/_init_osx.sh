@@ -19,10 +19,10 @@ if ! type brew &> /dev/null; then
 fi
 
 # Check if nix is installed, and install it if it isn't
-if ! type nix &> /dev/null; then
-  echo "Installing Nix..."
-  sh <(curl -L https://nixos.org/nix/install)
-fi
+# if ! type nix &> /dev/null; then
+#   echo "Installing Nix..."
+#   sh <(curl -L https://nixos.org/nix/install)
+# fi
 
 
 # Install brew packages
