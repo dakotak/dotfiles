@@ -4,6 +4,7 @@ tap "homebrew/cask-fonts"
 
 # Install CLI Apps
 brew "antidote"
+brew "atuin"
 brew "bat"
 brew "coreutils" if OS.mac?
 brew "d2"
