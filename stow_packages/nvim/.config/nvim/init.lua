@@ -269,21 +269,21 @@ require('lazy').setup({
   { 'Bekaboo/deadcolumn.nvim' },
 
   -- Underline all instances of word under the cursor
-  {
-    'yamatsum/nvim-cursorline',
-    opts = {
-      cursorline = {
-        enable = true,
-        timeout = 1000,
-        number = false,
-      },
-      cusorword = {
-        enable = true,
-        min_length = 3,
-        hl = { underline = true },
-      },
-    },
-  },
+  -- {
+  --   'yamatsum/nvim-cursorline',
+  --   opts = {
+  --     cursorline = {
+  --       enable = true,
+  --       timeout = 1000,
+  --       number = false,
+  --     },
+  --     cusorword = {
+  --       enable = true,
+  --       min_length = 3,
+  --       hl = { underline = true },
+  --     },
+  --   },
+  -- },
 
   -- Smooth scrolling
   { 'karb94/neoscroll.nvim' },
