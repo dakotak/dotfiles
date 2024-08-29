@@ -69,6 +69,7 @@ fi
 
 
 export EDITOR="nvim"
+export XDG_CONFIG_HOME=$HOME/.config
 
 # This nvm stuff fucked my zsh start times
 # Related artical: https://medium.com/@dannysmith/little-thing-2-speeding-up-zsh-f1860390f92
