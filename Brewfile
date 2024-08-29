@@ -37,13 +37,14 @@ brew "zoxide"
 brew "zstd"
 
 # Install GUI Apps
-cask "db-browser-for-sqlite"
 # cask "google-chrome"
+# cask "rectangle"
+cask "db-browser-for-sqlite"
 cask "hammerspoon"
 cask "iterm2"
-cask "obsidian"
 cask "maccy"
-# cask "rectangle"
+cask "obsidian"
+cask "shortcat" # Keyboard mouse shortcuts
 cask "signal"
 cask "spotify"
 cask "visual-studio-code"
