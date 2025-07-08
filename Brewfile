@@ -1,10 +1,11 @@
 
-
-tap "homebrew/cask-fonts"
-
 # Install CLI Apps
+# brew "gnupg" if OS.mac?
+# brew "go-task"
+brew "age"
 brew "antidote"
 brew "atuin"
+brew "awscli"
 brew "bat"
 brew "coreutils" if OS.mac?
 brew "d2"
@@ -14,29 +15,35 @@ brew "entr"
 brew "findutils" if OS.mac?
 brew "fzf"
 brew "gh"
-brew "gnupg" if OS.mac?
-# brew "go-task"
+brew "go"
 brew "gping"
 brew "gum"
 brew "hr"
 brew "jq"
+brew "just"
+brew "kubectx"
+brew "kubernetes-cli"
 brew "lsd"
 brew "navi" # Interactive cheatsheet tool for the command-line
 brew "neovim"
 brew "parallel"
-brew "python@3.10"
+brew "python@3.14"
 brew "ripgrep"
 brew "shellcheck"
+brew "sops"
 brew "stow"
 brew "teip"
 brew "tmux"
 brew "tree"
 brew "watch" if OS.mac?
+brew "watchexec"
+brew "yq"
 brew "zellij" # Terminal Multiplexer
 brew "zoxide"
 brew "zstd"
 
-# Install GUI Apps
+# Install GUI Apps "Casks"
+cask "espanso"
 # cask "google-chrome"
 # cask "rectangle"
 cask "db-browser-for-sqlite"
@@ -45,7 +52,7 @@ cask "iterm2"
 cask "maccy"
 cask "obsidian"
 cask "shortcat" # Keyboard mouse shortcuts
-cask "signal"
+# cask "signal"
 cask "spotify"
 cask "visual-studio-code"
 
