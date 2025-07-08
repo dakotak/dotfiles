@@ -9,3 +9,8 @@ Brewfile.lock.json
 # Ignore system local zsh config
 zsh/.config/zsh/local.zsh
 .zsh_plugins.zsh
+
+.local
+
+# Ignore nvim lazy lock file
+lazy-lock.json
