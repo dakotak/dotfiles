@@ -14,6 +14,9 @@ alias vi=vim
 alias vim=nvim
 alias wax=watchexec
 alias zrc="vim $ZDOTDIR/.zshrc; source $ZDOTDIR/.zshrc"
+alias k=kubectl
+alias kc=kubectx
+alias kns=kubens
 
 # Alias to edit this file and reload it
 alias aliasedit="vim $ZDOTDIR/aliases.zsh; source $ZDOTDIR/aliases.zsh"
