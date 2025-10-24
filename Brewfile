@@ -36,6 +36,7 @@ brew "sops"
 brew "specify" # Github Spec Kit
 brew "stow"
 brew "teip"
+brew "terraform-docs"
 brew "tmux"
 brew "tree"
 brew "watch" if OS.mac?
