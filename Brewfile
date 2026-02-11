@@ -41,12 +41,14 @@ brew "tmux"
 brew "tree"
 brew "watch" if OS.mac?
 brew "watchexec"
+brew "yarn"
 brew "yq"
 brew "zellij" # Terminal Multiplexer
 brew "zoxide"
 brew "zstd"
 
 # Install GUI Apps "Casks"
+cask "cursor"
 cask "espanso"
 # cask "google-chrome"
 # cask "rectangle"
