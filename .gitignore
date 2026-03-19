@@ -14,3 +14,8 @@ zsh/.config/zsh/local.zsh
 
 # Ignore nvim lazy lock file
 lazy-lock.json
+
+# Ignore zsh local state
+stow_packages/zsh/.config/zsh/.zcompcache/
+stow_packages/zsh/.config/zsh/.zsh_sessions/
+

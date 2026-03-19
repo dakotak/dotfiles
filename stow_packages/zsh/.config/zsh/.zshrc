@@ -94,4 +94,6 @@ if type zoxide &> /dev/null; then
     eval "$(zoxide init --cmd cd zsh)"
 fi
 
+export PATH="$PATH:/Users/dakota.knutson/bin"
+
 # zprof
