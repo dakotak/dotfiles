@@ -14,6 +14,7 @@ STOW_PACKAGES=(
   lsd
   nvim
   scripts
+  tmux
   zellij
   zsh
 )
