@@ -45,7 +45,6 @@ brew "watch" if OS.mac?
 brew "watchexec"
 brew "yarn"
 brew "yq"
-brew "zellij" # Terminal Multiplexer
 brew "zoxide"
 brew "zstd"
 
