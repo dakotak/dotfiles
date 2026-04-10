@@ -3,6 +3,7 @@
 alias aliasedit="vim ~/.config/zsh/aliases.zsh"
 alias dc="docker compose"
 alias diff="diff --color=auto --side-by-side"
+alias lg=lazygit
 alias ll="ls -al"
 alias ls=lsd
 alias python=python3
