@@ -24,6 +24,7 @@ brew "jq"
 brew "just"
 brew "kubectx"
 brew "kubernetes-cli"
+brew "lazygit"
 brew "lsd"
 brew "navi" # Interactive cheatsheet tool for the command-line
 brew "neovim"
