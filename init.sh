@@ -11,6 +11,7 @@ cd "$(dirname "$0")"
 STOW_PACKAGES=(
   atuin
   espanso
+  ghostty
   lsd
   nvim
   scripts

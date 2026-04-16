@@ -1,0 +1,15 @@
+
+font-family = "JetBrainsMono Nerd Font Mono"
+font-size = 14
+
+theme = 0x96f
+
+# Cusror movement annimation
+custom-shader = shaders/cursor_warp.glsl
+
+window-padding-balance = true
+
+window-colorspace = display-p3
+
+macos-titlebar-style = transparent
+
