@@ -50,7 +50,7 @@ brew "zstd"
 
 # Install GUI Apps "Casks"
 # cask "alacritty"
-cask "cursor"
+# cask "cursor"
 cask "espanso"
 # cask "google-chrome"
 # cask "rectangle"
