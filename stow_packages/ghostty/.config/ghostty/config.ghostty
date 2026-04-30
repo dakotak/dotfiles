@@ -15,6 +15,6 @@ macos-titlebar-style = transparent
 
 copy-on-select = clipboard
 
-auto-update = false
+auto-update = off
 
 
