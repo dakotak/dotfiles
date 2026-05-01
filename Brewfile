@@ -50,6 +50,8 @@ brew "zstd"
 
 # Install GUI Apps "Casks"
 # cask "alacritty"
+cask "claude"
+cask "claude-code"
 # cask "cursor"
 cask "espanso"
 # cask "google-chrome"
