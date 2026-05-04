@@ -26,6 +26,7 @@ brew "kubectx"
 brew "kubernetes-cli"
 brew "lazygit"
 brew "lsd"
+brew "markdownlint-cli2"
 brew "navi" # Interactive cheatsheet tool for the command-line
 brew "neovim"
 brew "node"
