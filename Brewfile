@@ -27,6 +27,7 @@ brew "kubernetes-cli"
 brew "lazygit"
 brew "lsd"
 brew "markdownlint-cli2"
+brew "multi-gitter" # Use a script to make PRs in all org repos
 brew "navi" # Interactive cheatsheet tool for the command-line
 brew "neovim"
 brew "node"
